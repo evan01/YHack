@@ -9,8 +9,7 @@
 import UIKit
 import CoreLocation
 import MapKit
-import CoreLocation
-
+import Foundation
 
 class CompassViewController: UIViewController, CLLocationManagerDelegate {
 
@@ -35,16 +34,24 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
         }))
         
 
-        distanceLeft = euclidianDistance(location1: dummyLocation, location2: location);
-        self.distanceLabel.text = "Distance to Friend"
+        distanceLeft = haversineFormula(location1: dummyLocation, location2: location)
+        self.distanceLabel.text = "\(distanceLeft) m"
     }
     
     func degreesToRadians (angle:CGFloat) -> CGFloat{
         return  angle * .pi / 180
     }
     
-    func euclidianDistance(location1: CLLocation, location2: CLLocation) -> CGFloat{
-            return 0
+    func haversineFormula(location1: CLLocation, location2: CLLocation) -> CGFloat{
+        let R : Double = 6378.137; // Radius of earth in KM
+        let dLat = location2.coordinate.latitude * .pi / 180 - location1.coordinate.latitude * .pi / 180
+        let dLon = location2.coordinate.longitude * .pi / 180 - location2.coordinate.longitude * .pi / 180
+        let a = sin(dLat/2) * sin(dLat/2) +
+            cos(location1.coordinate.latitude * .pi / 180) * cos(location2.coordinate.latitude * .pi / 180) *
+            sin(dLon/2) * sin(dLon/2)
+        let c = 2 * atan2(sqrt(a), sqrt(1-a));
+        let d = R * c;
+        return CGFloat(d * 1000.0); // return in meters
 }
 
     override func viewDidLoad() {
