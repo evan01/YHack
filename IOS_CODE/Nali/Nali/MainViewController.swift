@@ -22,6 +22,9 @@ class MainViewController: UIViewController, friendsTableDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let nc = NetworkClient()
+        nc.createUser()
+        
         // Do any additional setup after loading the view.
         
     }

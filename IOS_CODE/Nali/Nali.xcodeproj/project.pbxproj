@@ -16,6 +16,10 @@
 		07A384E81DD7613300F62FBF /* FriendCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A384E61DD7613300F62FBF /* FriendCellTableViewCell.swift */; };
 		07A384E91DD7613300F62FBF /* FriendsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A384E71DD7613300F62FBF /* FriendsListController.swift */; };
 		07A384EB1DD7700B00F62FBF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A384EA1DD7700B00F62FBF /* Model.swift */; };
+		07A384F81DD7BA0F00F62FBF /* NetworkInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A384F71DD7BA0F00F62FBF /* NetworkInterface.swift */; };
+		07A385051DD7BB9B00F62FBF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A385031DD7BB5000F62FBF /* Alamofire.framework */; };
+		07A385061DD7BC5B00F62FBF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A385031DD7BB5000F62FBF /* Alamofire.framework */; };
+		07A385071DD7BC5B00F62FBF /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07A385031DD7BB5000F62FBF /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		07FED77A1DD6C23500E424E7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FED7791DD6C23500E424E7 /* MainViewController.swift */; };
 		07FED77C1DD6C24500E424E7 /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FED77B1DD6C24500E424E7 /* CompassViewController.swift */; };
 		434DB2F61DD6C90C000CB7B5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434DB2F51DD6C90C000CB7B5 /* CoreLocation.framework */; };
@@ -31,6 +35,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		07A385001DD7BAFB00F62FBF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				07A385071DD7BC5B00F62FBF /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		079843911DD6B6E8004261B2 /* Nali.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nali.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		079843941DD6B6E8004261B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +63,8 @@
 		07A384E61DD7613300F62FBF /* FriendCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendCellTableViewCell.swift; path = Nali/FriendCellTableViewCell.swift; sourceTree = "<group>"; };
 		07A384E71DD7613300F62FBF /* FriendsListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsListController.swift; path = Nali/FriendsListController.swift; sourceTree = "<group>"; };
 		07A384EA1DD7700B00F62FBF /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		07A384F71DD7BA0F00F62FBF /* NetworkInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkInterface.swift; sourceTree = "<group>"; };
+		07A385031DD7BB5000F62FBF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Nali/Alamofire.framework; sourceTree = "<group>"; };
 		07FED7791DD6C23500E424E7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Nali/MainViewController.swift; sourceTree = "<group>"; };
 		07FED77B1DD6C24500E424E7 /* CompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
 		434DB2F51DD6C90C000CB7B5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -55,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07A385051DD7BB9B00F62FBF /* Alamofire.framework in Frameworks */,
+				07A385061DD7BC5B00F62FBF /* Alamofire.framework in Frameworks */,
 				434DB2F61DD6C90C000CB7B5 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,6 +122,7 @@
 				0798439D1DD6B6E8004261B2 /* LaunchScreen.storyboard */,
 				079843A01DD6B6E8004261B2 /* Info.plist */,
 				0798439B1DD6B6E8004261B2 /* Assets.xcassets */,
+				07A384F71DD7BA0F00F62FBF /* NetworkInterface.swift */,
 			);
 			path = Nali;
 			sourceTree = "<group>";
@@ -127,6 +150,7 @@
 		434DB2F41DD6C90C000CB7B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				07A385031DD7BB5000F62FBF /* Alamofire.framework */,
 				434DB2F51DD6C90C000CB7B5 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
@@ -142,6 +166,7 @@
 				0798438D1DD6B6E8004261B2 /* Sources */,
 				0798438E1DD6B6E8004261B2 /* Frameworks */,
 				0798438F1DD6B6E8004261B2 /* Resources */,
+				07A385001DD7BAFB00F62FBF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -239,6 +264,7 @@
 				07FED77A1DD6C23500E424E7 /* MainViewController.swift in Sources */,
 				079843971DD6B6E8004261B2 /* ViewController.swift in Sources */,
 				07A384E81DD7613300F62FBF /* FriendCellTableViewCell.swift in Sources */,
+				07A384F81DD7BA0F00F62FBF /* NetworkInterface.swift in Sources */,
 				07A384E91DD7613300F62FBF /* FriendsListController.swift in Sources */,
 				079843951DD6B6E8004261B2 /* AppDelegate.swift in Sources */,
 				07FED77C1DD6C24500E424E7 /* CompassViewController.swift in Sources */,
@@ -378,6 +404,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Nali",
+				);
 				INFOPLIST_FILE = Nali/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = parchican.Nali;
@@ -390,6 +420,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Nali",
+				);
 				INFOPLIST_FILE = Nali/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = parchican.Nali;
