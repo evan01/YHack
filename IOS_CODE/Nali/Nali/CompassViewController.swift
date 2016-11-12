@@ -14,6 +14,7 @@ import CoreLocation
 
 class CompassViewController: UIViewController, CLLocationManagerDelegate {
 
+
     @IBOutlet weak var arrow: UIImageView!
     
     let manager = CLLocationManager()
