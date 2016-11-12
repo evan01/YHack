@@ -15,6 +15,7 @@
 		079843AA1DD6B6E8004261B2 /* NaliUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079843A91DD6B6E8004261B2 /* NaliUITests.swift */; };
 		07FED77A1DD6C23500E424E7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FED7791DD6C23500E424E7 /* MainViewController.swift */; };
 		07FED77C1DD6C24500E424E7 /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FED77B1DD6C24500E424E7 /* CompassViewController.swift */; };
+		434DB2F61DD6C90C000CB7B5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434DB2F51DD6C90C000CB7B5 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		079843AB1DD6B6E8004261B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07FED7791DD6C23500E424E7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		07FED77B1DD6C24500E424E7 /* CompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
+		434DB2F51DD6C90C000CB7B5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				434DB2F61DD6C90C000CB7B5 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +69,7 @@
 				079843931DD6B6E8004261B2 /* Nali */,
 				079843A81DD6B6E8004261B2 /* NaliUITests */,
 				079843921DD6B6E8004261B2 /* Products */,
+				434DB2F41DD6C90C000CB7B5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +104,14 @@
 				079843AB1DD6B6E8004261B2 /* Info.plist */,
 			);
 			path = NaliUITests;
+			sourceTree = "<group>";
+		};
+		434DB2F41DD6C90C000CB7B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				434DB2F51DD6C90C000CB7B5 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
