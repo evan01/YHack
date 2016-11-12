@@ -17,7 +17,7 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var arrow: UIImageView!
     
     let manager = CLLocationManager()
-    var distanceLeft:CGFloat = 0;
+    var distanceLeft:Int = 0;
     
     // dummy coordinates for testing purposes
     let dummyLocation: CLLocation = CLLocation(latitude: 37.3307498, longitude: -122.03054302)
@@ -33,8 +33,7 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
             self.arrow.transform = CGAffineTransform.init(rotationAngle: rotationAngleRad)
         }))
         
-
-        distanceLeft = haversineFormula(location1: dummyLocation, location2: location)
+        distanceLeft = Int(ceil(haversineFormula(location1: dummyLocation, location2: location)))
         self.distanceLabel.text = "\(distanceLeft) m"
     }
     
@@ -43,7 +42,7 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func haversineFormula(location1: CLLocation, location2: CLLocation) -> CGFloat{
-        let R : Double = 6378.137; // Radius of earth in KM
+        let R : Double = 6378.137; // Radius of earth in km
         let dLat = location2.coordinate.latitude * .pi / 180 - location1.coordinate.latitude * .pi / 180
         let dLon = location2.coordinate.longitude * .pi / 180 - location2.coordinate.longitude * .pi / 180
         let a = sin(dLat/2) * sin(dLat/2) +
