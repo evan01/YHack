@@ -10,10 +10,24 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        
+        //The first thing that needs to happen is to load all of the friends into cells in the table
+        
+        loadFriends()
+    
+        
+    }
+    
+    //This function will load all of a given users friends, displaying them into the table view
+    func loadFriends(){
+        //Instantiate the table view controller
+    
+    
     }
 
     override func didReceiveMemoryWarning() {
