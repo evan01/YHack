@@ -15,6 +15,7 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var arrow: UIImageView!
+    @IBOutlet weak var decodedDistLabel: UILabel!
     
     let manager = CLLocationManager()
     var distanceLeft:Int = 0;
@@ -34,6 +35,13 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
         }))
         
         distanceLeft = Int(ceil(haversineFormula(location1: dummyLocation, location2: location)))
+        if (distanceLeft < 20) {
+            self.decodedDistLabel.text = "So close!"
+        } else if (distanceLeft < 80) {
+            self.decodedDistLabel.text = "Almost there!"
+        } else {
+            self.decodedDistLabel.text = "Keep going!"
+        }
         self.distanceLabel.text = "\(distanceLeft) m"
     }
     
