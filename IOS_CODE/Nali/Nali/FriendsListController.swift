@@ -8,16 +8,24 @@
 
 import UIKit
 
+protocol friendsTableDelegate{
+    func updateSelectedLabel(selected:String)
+}
+
 class FriendsListController: UITableViewController {
     
     var friends = ["Evan","Donna","Jonathan","Alex","JD","Burri"]
     let cellIdentifier = "FRIEND_CELL"
+    var model : Model? = nil
+    var delegate : friendsTableDelegate?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.black//Set background color to black
 
         // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+         self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
@@ -49,51 +57,19 @@ class FriendsListController: UITableViewController {
 
         return cell
     }
- 
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    //When the user selects the row, update the Main controllers label
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        //Get the Main View Controller
+        updateSelectedName(name: friends[indexPath.row])
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    //This function will take in a string and update the label in the parent VC that displays the selected table entries
+    func updateSelectedName(name:String){
+        print("Updating" + name)
+        model?.selectedItem = name
+        delegate?.updateSelectedLabel(selected: name)
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

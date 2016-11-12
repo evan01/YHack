@@ -8,9 +8,10 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, friendsTableDelegate{
     
     @IBOutlet weak var selectedName: UILabel!
+    
     
     
     //This function is called when the user wants to look for something
@@ -30,16 +31,16 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //Implement the delegate protocol
+    func updateSelectedLabel(selected : String){
+        self.selectedName.text = selected
     }
-    */
-
+    
+    //This class needs to care about messages from the friends list class
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dvc = segue.destination as? FriendsListController {
+            dvc.delegate = self
+        }
+    }
+    
 }

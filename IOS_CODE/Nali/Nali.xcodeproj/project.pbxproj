@@ -15,6 +15,7 @@
 		079843AA1DD6B6E8004261B2 /* NaliUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079843A91DD6B6E8004261B2 /* NaliUITests.swift */; };
 		07A384E81DD7613300F62FBF /* FriendCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A384E61DD7613300F62FBF /* FriendCellTableViewCell.swift */; };
 		07A384E91DD7613300F62FBF /* FriendsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A384E71DD7613300F62FBF /* FriendsListController.swift */; };
+		07A384EB1DD7700B00F62FBF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A384EA1DD7700B00F62FBF /* Model.swift */; };
 		07FED77A1DD6C23500E424E7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FED7791DD6C23500E424E7 /* MainViewController.swift */; };
 		07FED77C1DD6C24500E424E7 /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FED77B1DD6C24500E424E7 /* CompassViewController.swift */; };
 		434DB2F61DD6C90C000CB7B5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434DB2F51DD6C90C000CB7B5 /* CoreLocation.framework */; };
@@ -43,6 +44,7 @@
 		079843AB1DD6B6E8004261B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07A384E61DD7613300F62FBF /* FriendCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendCellTableViewCell.swift; path = Nali/FriendCellTableViewCell.swift; sourceTree = "<group>"; };
 		07A384E71DD7613300F62FBF /* FriendsListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsListController.swift; path = Nali/FriendsListController.swift; sourceTree = "<group>"; };
+		07A384EA1DD7700B00F62FBF /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		07FED7791DD6C23500E424E7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Nali/MainViewController.swift; sourceTree = "<group>"; };
 		07FED77B1DD6C24500E424E7 /* CompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
 		434DB2F51DD6C90C000CB7B5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -97,6 +99,7 @@
 				0798439D1DD6B6E8004261B2 /* LaunchScreen.storyboard */,
 				079843A01DD6B6E8004261B2 /* Info.plist */,
 				07FED77B1DD6C24500E424E7 /* CompassViewController.swift */,
+				07A384EA1DD7700B00F62FBF /* Model.swift */,
 			);
 			path = Nali;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07A384EB1DD7700B00F62FBF /* Model.swift in Sources */,
 				07FED77A1DD6C23500E424E7 /* MainViewController.swift in Sources */,
 				079843971DD6B6E8004261B2 /* ViewController.swift in Sources */,
 				07A384E81DD7613300F62FBF /* FriendCellTableViewCell.swift in Sources */,
