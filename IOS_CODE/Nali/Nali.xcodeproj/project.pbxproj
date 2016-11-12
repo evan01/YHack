@@ -93,13 +93,13 @@
 			children = (
 				07A384E51DD7610200F62FBF /* mainScreen */,
 				079843941DD6B6E8004261B2 /* AppDelegate.swift */,
+				07FED77B1DD6C24500E424E7 /* CompassViewController.swift */,
 				079843961DD6B6E8004261B2 /* ViewController.swift */,
+				07A384EA1DD7700B00F62FBF /* Model.swift */,
 				079843981DD6B6E8004261B2 /* Main.storyboard */,
-				0798439B1DD6B6E8004261B2 /* Assets.xcassets */,
 				0798439D1DD6B6E8004261B2 /* LaunchScreen.storyboard */,
 				079843A01DD6B6E8004261B2 /* Info.plist */,
-				07FED77B1DD6C24500E424E7 /* CompassViewController.swift */,
-				07A384EA1DD7700B00F62FBF /* Model.swift */,
+				0798439B1DD6B6E8004261B2 /* Assets.xcassets */,
 			);
 			path = Nali;
 			sourceTree = "<group>";

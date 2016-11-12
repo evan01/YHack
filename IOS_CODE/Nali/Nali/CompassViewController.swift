@@ -14,14 +14,14 @@ import CoreLocation
 
 class CompassViewController: UIViewController, CLLocationManagerDelegate {
 
-    // dummy coordinates for testing purposes
-    let dummyLongitude = -122.03054302
-    let dummyLatitude = 37.3307498
-    
-    @IBOutlet weak var distanceLeft: UITextField!
+    @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var arrow: UIImageView!
     
     let manager = CLLocationManager()
+    var distanceLeft:CGFloat = 0;
+    
+    // dummy coordinates for testing purposes
+    let dummyLocation: CLLocation = CLLocation(latitude: 37.3307498, longitude: -122.03054302)
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
@@ -33,13 +33,20 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
         UIView.animate(withDuration: 0.5, animations: ({
             self.arrow.transform = CGAffineTransform.init(rotationAngle: rotationAngleRad)
         }))
-        self.distanceLeft.text = "test"
-        }
+        
+
+        distanceLeft = euclidianDistance(location1: dummyLocation, location2: location);
+        self.distanceLabel.text = "Distance to Friend"
+    }
     
     func degreesToRadians (angle:CGFloat) -> CGFloat{
         return  angle * .pi / 180
     }
     
+    func euclidianDistance(location1: CLLocation, location2: CLLocation) -> CGFloat{
+            return 0
+}
+
     override func viewDidLoad() {
         super.viewDidLoad()
         manager.delegate = self

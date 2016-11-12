@@ -123,26 +123,24 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="arrow3" translatesAutoresizingMaskIntoConstraints="NO" id="VcU-RX-HpP">
                                 <rect key="frame" x="40" y="176" width="240" height="216"/>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x33-q6-Z46">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x33-q6-Z46">
                                 <rect key="frame" x="0.0" y="524" width="321" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="BACK" id="mOk-Qe-pTq">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="showDetail" action="showViewController:sender:" id="FUD-g3-Tl9"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="aNN-79-Znu"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test" borderStyle="roundedRect" textAlignment="center" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="POX-Cd-R4M">
-                                <rect key="frame" x="112" y="445" width="97" height="30"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Your friends Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="105-Ja-0oD">
                                 <rect key="frame" x="79" y="106" width="163" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEP-Au-Ugh">
+                                <rect key="frame" x="139" y="443" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -150,21 +148,21 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="POX-Cd-R4M" firstAttribute="centerX" secondItem="7dl-4J-qmA" secondAttribute="centerX" id="3vm-h7-yB4"/>
                             <constraint firstItem="5nT-p9-iva" firstAttribute="top" secondItem="VcU-RX-HpP" secondAttribute="bottom" constant="211" id="7sL-RW-Lhq"/>
                             <constraint firstItem="rVk-3y-Hb8" firstAttribute="centerX" secondItem="7dl-4J-qmA" secondAttribute="centerX" id="9ON-V6-5CJ"/>
                             <constraint firstItem="VcU-RX-HpP" firstAttribute="centerX" secondItem="7dl-4J-qmA" secondAttribute="centerX" id="DFF-tO-54G"/>
-                            <constraint firstItem="POX-Cd-R4M" firstAttribute="top" secondItem="VcU-RX-HpP" secondAttribute="bottom" constant="53" id="ECM-LU-mQX"/>
+                            <constraint firstItem="x33-q6-Z46" firstAttribute="top" secondItem="IxS-7Z-nbD" secondAttribute="bottom" constant="504" id="Jjs-Pq-PXz"/>
                             <constraint firstItem="105-Ja-0oD" firstAttribute="top" secondItem="rVk-3y-Hb8" secondAttribute="bottom" constant="10" id="KBn-ZK-XAk"/>
+                            <constraint firstItem="jEP-Au-Ugh" firstAttribute="centerX" secondItem="7dl-4J-qmA" secondAttribute="centerX" id="O8T-KT-GMY"/>
+                            <constraint firstItem="x33-q6-Z46" firstAttribute="top" secondItem="jEP-Au-Ugh" secondAttribute="bottom" constant="60" id="SfB-ed-v9u"/>
                             <constraint firstItem="105-Ja-0oD" firstAttribute="centerX" secondItem="7dl-4J-qmA" secondAttribute="centerX" id="eFa-7k-Lko"/>
-                            <constraint firstItem="POX-Cd-R4M" firstAttribute="centerX" secondItem="7dl-4J-qmA" secondAttribute="centerX" id="iTM-Bi-tBg"/>
                             <constraint firstItem="VcU-RX-HpP" firstAttribute="top" secondItem="rVk-3y-Hb8" secondAttribute="bottom" constant="78" id="oSn-OG-uxo"/>
                             <constraint firstItem="VcU-RX-HpP" firstAttribute="centerY" secondItem="7dl-4J-qmA" secondAttribute="centerY" id="va1-ov-5kM"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="arrow" destination="VcU-RX-HpP" id="xO0-Jh-JiK"/>
-                        <outlet property="distanceLeft" destination="POX-Cd-R4M" id="w2d-z7-Khd"/>
+                        <outlet property="distanceLabel" destination="jEP-Au-Ugh" id="w9E-tc-iIk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CTL-Pz-mGB" userLabel="First Responder" sceneMemberID="firstResponder"/>
