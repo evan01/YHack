@@ -21,7 +21,7 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         let location = locations[0]
-        print ("Longitude :",location.coordinate.longitude, ", Latitude :", location.coordinate.latitude)
+        print ("Longitude:",location.coordinate.longitude, ", Latitude:", location.coordinate.latitude, "Heading:", location.course)
         }
     
     override func viewDidLoad() {
