@@ -58,4 +58,9 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    @IBAction func goBackToMainScreen(_ sender: Any) {
+        let mainMenu = self.storyboard?.instantiateViewController(withIdentifier: "MAIN_MENU")
+        self.present(mainMenu!, animated: true, completion: nil)
+    }
 }

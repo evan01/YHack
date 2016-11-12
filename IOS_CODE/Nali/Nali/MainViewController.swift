@@ -12,18 +12,19 @@ class MainViewController: UIViewController, friendsTableDelegate{
     
     @IBOutlet weak var selectedName: UILabel!
     
-    
-    
-    //This function is called when the user wants to look for something
+    //Will switch the screen!!
     @IBAction func searchForFriend(_ sender: Any) {
+        let compassView = self.storyboard?.instantiateViewController(withIdentifier: "COMPASS_SCREEN")
         
+        self.present(compassView!, animated: true, completion: nil)
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nc = NetworkClient()
-        nc.createUser()
+//        let nc = NetworkClient()
+//        nc.createUser()
         
         // Do any additional setup after loading the view.
         
