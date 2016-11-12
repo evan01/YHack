@@ -58,6 +58,10 @@ class NetworkClient{
         
     }
     
+    func contactExists(contact:String)-> Bool{
+        return false
+    }
+    
     
     
 }
