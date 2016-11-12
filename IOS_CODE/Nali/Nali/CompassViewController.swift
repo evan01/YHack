@@ -14,20 +14,15 @@ import CoreLocation
 
 class CompassViewController: UIViewController, CLLocationManagerDelegate {
 
-    // map
-    @IBOutlet weak var map: MKMapView!
+    @IBOutlet weak var arrow: UIImageView!
     
     let manager = CLLocationManager()
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations[0]
-        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
-        let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
-        let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
         
-        print (location.coordinate.longitude)
-        print (location.coordinate.latitude)
-    }
+        let location = locations[0]
+        print ("Longitude :",location.coordinate.longitude, ", Latitude :", location.coordinate.latitude)
+        }
     
     override func viewDidLoad() {
         super.viewDidLoad()
