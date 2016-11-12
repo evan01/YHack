@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Nali" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,128 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Nali top banner" translatesAutoresizingMaskIntoConstraints="NO" id="IHG-9W-7Ca">
+                                <rect key="frame" x="122" y="20" width="131" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="131" id="e1V-ez-jB1"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWa-Ta-YkY">
+                                <rect key="frame" x="0.0" y="95" width="70" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="pm0-sV-Ueq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wxG-Rh-Eah">
+                                <rect key="frame" x="0.0" y="124" width="375" height="96"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="hIW-eA-PMl"/>
+                                </constraints>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ueB-wQ-PcU">
+                                <rect key="frame" x="0.0" y="269" width="375" height="289"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f29-XQ-uzt">
+                                <rect key="frame" x="0.0" y="240" width="57" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NOM-kx-BXF">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Go" id="G79-iR-zGp">
+                                        <connections>
+                                            <segue destination="C7d-zp-63d" kind="show" id="n8p-wt-UUJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f29-XQ-uzt" firstAttribute="top" secondItem="wxG-Rh-Eah" secondAttribute="bottom" constant="20" id="5fk-Cv-pJB"/>
+                            <constraint firstItem="f29-XQ-uzt" firstAttribute="leading" secondItem="ueB-wQ-PcU" secondAttribute="leading" id="7Jq-Qz-OZ3"/>
+                            <constraint firstItem="ueB-wQ-PcU" firstAttribute="trailing" secondItem="NOM-kx-BXF" secondAttribute="trailing" id="DP9-sk-eCY"/>
+                            <constraint firstItem="NOM-kx-BXF" firstAttribute="top" secondItem="ueB-wQ-PcU" secondAttribute="bottom" constant="65" id="EAN-es-h5W"/>
+                            <constraint firstItem="IHG-9W-7Ca" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="PP9-wr-zmD"/>
+                            <constraint firstItem="NOM-kx-BXF" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="QOP-B4-Ydk"/>
+                            <constraint firstItem="wxG-Rh-Eah" firstAttribute="top" secondItem="IHG-9W-7Ca" secondAttribute="bottom" constant="49" id="RJd-HR-tQa"/>
+                            <constraint firstItem="wxG-Rh-Eah" firstAttribute="trailing" secondItem="ueB-wQ-PcU" secondAttribute="trailing" id="WcW-IR-dWL"/>
+                            <constraint firstItem="gWa-Ta-YkY" firstAttribute="leading" secondItem="wxG-Rh-Eah" secondAttribute="leading" id="afd-lh-rf7"/>
+                            <constraint firstAttribute="trailing" secondItem="wxG-Rh-Eah" secondAttribute="trailing" id="mxH-lw-kxF"/>
+                            <constraint firstItem="wxG-Rh-Eah" firstAttribute="top" secondItem="gWa-Ta-YkY" secondAttribute="bottom" constant="8" symbolic="YES" id="n99-lD-3YK"/>
+                            <constraint firstItem="gWa-Ta-YkY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oKu-oX-Mjy"/>
+                            <constraint firstItem="wxG-Rh-Eah" firstAttribute="leading" secondItem="f29-XQ-uzt" secondAttribute="leading" id="szQ-4K-Gok"/>
+                            <constraint firstItem="ueB-wQ-PcU" firstAttribute="leading" secondItem="NOM-kx-BXF" secondAttribute="leading" id="xF1-mE-Dzc"/>
+                            <constraint firstItem="ueB-wQ-PcU" firstAttribute="top" secondItem="f29-XQ-uzt" secondAttribute="bottom" constant="8" symbolic="YES" id="ykd-cZ-akk"/>
+                            <constraint firstItem="gWa-Ta-YkY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="75" id="zVz-Mg-6XY"/>
+                            <constraint firstItem="IHG-9W-7Ca" firstAttribute="centerX" secondItem="wxG-Rh-Eah" secondAttribute="centerX" id="ze2-bO-rNa"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-490.39999999999998" y="60.719640179910051"/>
+        </scene>
+        <!--Compass View Controller-->
+        <scene sceneID="5tD-gU-HFQ">
+            <objects>
+                <viewController id="C7d-zp-63d" customClass="CompassViewController" customModule="Nali" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IxS-7Z-nbD"/>
+                        <viewControllerLayoutGuide type="bottom" id="5nT-p9-iva"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7dl-4J-qmA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOUR FRIENDS NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVk-3y-Hb8">
+                                <rect key="frame" x="103" y="61" width="171" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="compass-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="VcU-RX-HpP">
+                                <rect key="frame" x="67" y="240" width="240" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your friends Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="105-Ja-0oD">
+                                <rect key="frame" x="103" y="535" width="163" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x33-q6-Z46">
+                                <rect key="frame" x="1" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="BACK" id="mOk-Qe-pTq">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="FUD-g3-Tl9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CTL-Pz-mGB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="431" y="61"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Nali top banner" width="729" height="499"/>
+        <image name="compass-arrow" width="4446" height="4446"/>
+    </resources>
 </document>

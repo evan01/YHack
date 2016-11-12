@@ -13,6 +13,8 @@
 		0798439C1DD6B6E8004261B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0798439B1DD6B6E8004261B2 /* Assets.xcassets */; };
 		0798439F1DD6B6E8004261B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0798439D1DD6B6E8004261B2 /* LaunchScreen.storyboard */; };
 		079843AA1DD6B6E8004261B2 /* NaliUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079843A91DD6B6E8004261B2 /* NaliUITests.swift */; };
+		07FED77A1DD6C23500E424E7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FED7791DD6C23500E424E7 /* MainViewController.swift */; };
+		07FED77C1DD6C24500E424E7 /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FED77B1DD6C24500E424E7 /* CompassViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		079843A51DD6B6E8004261B2 /* NaliUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NaliUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		079843A91DD6B6E8004261B2 /* NaliUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaliUITests.swift; sourceTree = "<group>"; };
 		079843AB1DD6B6E8004261B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07FED7791DD6C23500E424E7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		07FED77B1DD6C24500E424E7 /* CompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				0798439B1DD6B6E8004261B2 /* Assets.xcassets */,
 				0798439D1DD6B6E8004261B2 /* LaunchScreen.storyboard */,
 				079843A01DD6B6E8004261B2 /* Info.plist */,
+				07FED7791DD6C23500E424E7 /* MainViewController.swift */,
+				07FED77B1DD6C24500E424E7 /* CompassViewController.swift */,
 			);
 			path = Nali;
 			sourceTree = "<group>";
@@ -199,8 +205,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07FED77A1DD6C23500E424E7 /* MainViewController.swift in Sources */,
 				079843971DD6B6E8004261B2 /* ViewController.swift in Sources */,
 				079843951DD6B6E8004261B2 /* AppDelegate.swift in Sources */,
+				07FED77C1DD6C24500E424E7 /* CompassViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +410,7 @@
 				079843B01DD6B6E8004261B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		079843B11DD6B6E8004261B2 /* Build configuration list for PBXNativeTarget "NaliUITests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +419,7 @@
 				079843B31DD6B6E8004261B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
