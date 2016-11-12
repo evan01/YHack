@@ -14,7 +14,11 @@ import CoreLocation
 
 class CompassViewController: UIViewController, CLLocationManagerDelegate {
 
-
+    // dummy coordinates for testing purposes
+    let dummyLongitude = -122.03054302
+    let dummyLatitude = 37.3307498
+    
+    @IBOutlet weak var distanceLeft: UITextField!
     @IBOutlet weak var arrow: UIImageView!
     
     let manager = CLLocationManager()
@@ -29,6 +33,7 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
         UIView.animate(withDuration: 0.5, animations: ({
             self.arrow.transform = CGAffineTransform.init(rotationAngle: rotationAngleRad)
         }))
+        self.distanceLeft.text = "test"
         }
     
     func degreesToRadians (angle:CGFloat) -> CGFloat{
