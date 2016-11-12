@@ -18,11 +18,26 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
     
     let manager = CLLocationManager()
     
+    var lastAngle: CGFloat = 0
+    var currentAngle: CGFloat = 0
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         let location = locations[0]
-        print ("Longitude:",location.coordinate.longitude, ", Latitude:", location.coordinate.latitude, "Heading:", location.course)
+        currentAngle = CGFloat(location.course)
+        // print statement for debugging
+        print ("Longitude:",location.coordinate.longitude, ", Latitude:", location.coordinate.latitude, "Heading: ",currentAngle)
+        let rotationAngleDeg: CGFloat = currentAngle - lastAngle
+        let rotationAngleRad: CGFloat = degreesToRadians(angle: rotationAngleDeg)
+        UIView.animate(withDuration: 0.5, animations: ({
+            self.arrow.transform = CGAffineTransform.init(rotationAngle: rotationAngleRad)
+        }))
+        lastAngle = currentAngle
         }
+    
+    func degreesToRadians (angle:CGFloat) -> CGFloat{
+        return  angle * .pi / 180
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
