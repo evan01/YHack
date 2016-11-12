@@ -24,12 +24,12 @@ struct User {
 
 class NetworkClient{
     
-    func createUser(){
+    func createUser(usr: User){
         
         //This function creates an account/Database record of a person using the first,last names, as well as id
         let parameters: Parameters = [
-            "first_name": "evan",
-            "last_name": "Knox"
+            "first_name": usr.firstName,
+            "last_name": usr.lastName
         ]
         
         // All three of these calls are equivalent
@@ -48,6 +48,7 @@ class NetworkClient{
     func updatePosition(usr: User){
         //This function will update a users current position
         //Pass in a User struct with all fields full
+        
     }
     
     func getFriendsPosition(user:User,friend:User){
