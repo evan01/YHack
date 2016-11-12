@@ -67,11 +67,14 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2k-y2-lhi">
                                 <rect key="frame" x="309" y="603" width="38" height="44"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="OQG-W0-sJW"/>
                                     <constraint firstAttribute="width" constant="38" id="iM5-09-ehK"/>
+                                    <constraint firstAttribute="width" secondItem="l2k-y2-lhi" secondAttribute="height" multiplier="19:22" id="zUT-dX-MDX"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="Go button"/>
                                 <connections>
                                     <action selector="searchForFriend:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JBf-6u-E5v"/>
+                                    <segue destination="C7d-zp-63d" kind="show" id="eqs-u3-vyU"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECTED NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAg-tz-tPX">
@@ -99,6 +102,7 @@
                             <constraint firstItem="uJP-ET-SYT" firstAttribute="top" secondItem="f29-XQ-uzt" secondAttribute="bottom" constant="8" symbolic="YES" id="Xtu-wj-mhU"/>
                             <constraint firstItem="jIh-mk-GSh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="137" id="ZIO-o0-ziC"/>
                             <constraint firstItem="f29-XQ-uzt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="j7F-6L-wxl"/>
+                            <constraint firstItem="l2k-y2-lhi" firstAttribute="top" secondItem="uJP-ET-SYT" secondAttribute="bottom" constant="18" id="q2i-Q3-YIY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="l2k-y2-lhi" secondAttribute="trailing" constant="12" id="q7F-xa-GjY"/>
                             <constraint firstItem="uJP-ET-SYT" firstAttribute="leading" secondItem="f29-XQ-uzt" secondAttribute="leading" id="sSf-KW-WGk"/>
                             <constraint firstItem="nEN-Tu-wj8" firstAttribute="leading" secondItem="tAg-tz-tPX" secondAttribute="leading" id="uNN-yr-QRk"/>
