@@ -39,7 +39,7 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
         // print statement for debugging
         print ("Longitude:",location.coordinate.longitude, ", Latitude:", location.coordinate.latitude, "Heading: ", location.course)
         let rotationAngleDeg: CGFloat = CGFloat(location.course)
-        let rotationAngleRad: CGFloat = degreesToRadians(angle: rotationAngleDeg)
+        let rotationAngleRad: CGFloat = calculateAngle(location1: location, location2: dummyLocation)
         UIView.animate(withDuration: 0.5, animations: ({
             self.arrow.transform = CGAffineTransform.init(rotationAngle: rotationAngleRad)
         }))
@@ -57,6 +57,13 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
     
     func degreesToRadians (angle:CGFloat) -> CGFloat{
         return  angle * .pi / 180
+    }
+    
+    // returns rad
+    func calculateAngle(location1: CLLocation, location2: CLLocation) -> CGFloat{
+        let a = sin(location2.coordinate.longitude-location1.coordinate.longitude) * cos(location2.coordinate.latitude)
+        let b = cos(location1.coordinate.latitude) * sin(location2.coordinate.latitude) - sin(location1.coordinate.latitude)*cos(location2.coordinate.latitude)*cos(location2.coordinate.longitude-location1.coordinate.longitude)
+        return  CGFloat(atan2(a,b))
     }
     
     func haversineFormula(location1: CLLocation, location2: CLLocation) -> CGFloat{

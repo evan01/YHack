@@ -275,18 +275,22 @@
                                     <segue destination="C7d-zp-63d" kind="show" id="U3k-5G-Efw"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="80X-hN-h8c">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="80X-hN-h8c">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="495"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8wG-gq-cu9" firstAttribute="top" secondItem="ybQ-Ut-bAd" secondAttribute="bottom" constant="14" id="0qB-8y-PxA"/>
+                            <constraint firstItem="80X-hN-h8c" firstAttribute="top" secondItem="sKE-L5-znd" secondAttribute="top" id="8Ee-5N-hJ9"/>
+                            <constraint firstItem="80X-hN-h8c" firstAttribute="leading" secondItem="ybQ-Ut-bAd" secondAttribute="leading" id="8mO-xe-OCx"/>
+                            <constraint firstAttribute="trailing" secondItem="80X-hN-h8c" secondAttribute="trailing" id="I1H-uk-xFI"/>
                             <constraint firstItem="NbH-MN-eJF" firstAttribute="top" secondItem="HQe-XX-ubC" secondAttribute="bottom" constant="492" id="MaY-EU-eVj"/>
+                            <constraint firstItem="80X-hN-h8c" firstAttribute="leading" secondItem="sKE-L5-znd" secondAttribute="leading" id="XNO-Tg-r6g"/>
                             <constraint firstItem="8wG-gq-cu9" firstAttribute="top" secondItem="NbH-MN-eJF" secondAttribute="bottom" constant="13" id="bSR-mE-O5D"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NbH-MN-eJF" secondAttribute="trailing" id="evp-FE-bXM"/>
                             <constraint firstItem="NbH-MN-eJF" firstAttribute="centerX" secondItem="sKE-L5-znd" secondAttribute="centerX" id="q1Y-Hy-Bjm"/>
+                            <constraint firstItem="NbH-MN-eJF" firstAttribute="top" secondItem="80X-hN-h8c" secondAttribute="bottom" constant="17" id="wOm-b5-pJm"/>
                             <constraint firstItem="NbH-MN-eJF" firstAttribute="leading" secondItem="sKE-L5-znd" secondAttribute="leadingMargin" constant="244" id="wQh-dK-kbS"/>
                             <constraint firstItem="ybQ-Ut-bAd" firstAttribute="centerX" secondItem="sKE-L5-znd" secondAttribute="centerX" id="y3M-Ok-lKK"/>
                         </constraints>
@@ -315,7 +319,7 @@
                                 <rect key="frame" x="0.0" y="28" width="288" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zLC-pi-vgO" id="jfZ-Gx-WWo">
-                                    <rect key="frame" x="0.0" y="0.0" width="288" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="288" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oN-mR-H42">
