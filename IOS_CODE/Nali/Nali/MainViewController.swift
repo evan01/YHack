@@ -71,7 +71,7 @@ class MainViewController: UIViewController, friendsTableDelegate{
     func updateSelectedLabel(selected : String, username : String){
         self.selectedNm = selected
         self.selectedUserName = username
-        self.selectedName.text = self.selectedNm
+//        self.selectedName.text = self.selectedNm
     }
     
     //This class needs to care about messages from the friends list class
