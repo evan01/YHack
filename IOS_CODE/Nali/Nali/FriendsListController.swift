@@ -12,9 +12,9 @@ protocol friendsTableDelegate{
     func updateSelectedLabel(selected:String)
 }
 
-class FriendsListController: UITableViewController {
+class FriendsListController: UITableViewController{
     
-    var friends = ["Evan","Donna","Jonathan","Alex","JD","Burri"]
+    var friends = [String]()
     let cellIdentifier = "FRIEND_CELL"
     var model : Model? = nil
     var delegate : friendsTableDelegate?
@@ -27,8 +27,6 @@ class FriendsListController: UITableViewController {
         // Uncomment the following line to preserve selection between presentations
          self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,6 +68,5 @@ class FriendsListController: UITableViewController {
         model?.selectedItem = name
         delegate?.updateSelectedLabel(selected: name)
     }
-    
 
 }
