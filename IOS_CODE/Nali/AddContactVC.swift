@@ -44,6 +44,7 @@ class AddContactVC: UIViewController {
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
+        
         //Either way we want to go back to the main screen
         let mainMenu = self.storyboard?.instantiateViewController(withIdentifier: "MAIN_MENU")
         self.present(mainMenu!, animated: true, completion: nil)

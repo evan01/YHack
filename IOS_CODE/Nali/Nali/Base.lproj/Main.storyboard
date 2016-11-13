@@ -86,8 +86,8 @@
                                     <segue destination="J6e-ee-yYb" kind="embed" id="E1f-7h-ll7"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECTED NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEN-Tu-wj8">
-                                <rect key="frame" x="16" y="527" width="135" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEN-Tu-wj8">
+                                <rect key="frame" x="16" y="527" width="8" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="gOR-7I-NY0"/>
                                 </constraints>
@@ -240,6 +240,7 @@
                         <outlet property="arrow" destination="VcU-RX-HpP" id="xO0-Jh-JiK"/>
                         <outlet property="decodedDistLabel" destination="105-Ja-0oD" id="4a4-xR-20H"/>
                         <outlet property="distanceLabel" destination="jEP-Au-Ugh" id="w9E-tc-iIk"/>
+                        <outlet property="friendsName" destination="rVk-3y-Hb8" id="oxF-hd-A2R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CTL-Pz-mGB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -261,7 +262,7 @@
                                 <rect key="frame" x="0.0" y="28" width="288" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zLC-pi-vgO" id="jfZ-Gx-WWo">
-                                    <rect key="frame" x="0.0" y="0.0" width="288" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="288" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oN-mR-H42">
@@ -294,7 +295,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y3d-Sz-XcK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-831" y="-14"/>
+            <point key="canvasLocation" x="-883" y="-15"/>
         </scene>
     </scenes>
     <resources>

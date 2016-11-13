@@ -9,12 +9,13 @@
 import UIKit
 
 protocol friendsTableDelegate{
-    func updateSelectedLabel(selected:String)
+    func updateSelectedLabel(selected:String,username:String)
 }
 
 class FriendsListController: UITableViewController {
     
-    var friends = ["Evan","Donna","Jonathan","Alex","JD","Burri"]
+    var friends = ["Evan","Donna","Jonathan","Alex","JD","Andrew","Burri"]
+    var userNames = ["eknoxmobile","phillipino","habbsfan","bird","smashBro","uhhhh","burrito"]
     let cellIdentifier = "FRIEND_CELL"
     var model : Model? = nil
     var delegate : friendsTableDelegate?
@@ -61,14 +62,14 @@ class FriendsListController: UITableViewController {
     //When the user selects the row, update the Main controllers label
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         //Get the Main View Controller
-        updateSelectedName(name: friends[indexPath.row])
+        updateSelectedName(name: friends[indexPath.row-1], userName : userNames[indexPath.row-1])
     }
     
     //This function will take in a string and update the label in the parent VC that displays the selected table entries
-    func updateSelectedName(name:String){
-        print("Updating" + name)
+    func updateSelectedName(name:String,userName:String){
+        print("Updating " + name)
         model?.selectedItem = name
-        delegate?.updateSelectedLabel(selected: name)
+        delegate?.updateSelectedLabel(selected: name,username: userName)
     }
     
 

@@ -13,17 +13,27 @@ import Foundation
 
 class CompassViewController: UIViewController, CLLocationManagerDelegate {
 
+    
+    //todo , fix this hacky hardcoded friend name to the name of the selected friend in the form
+    var frndName = ""
+    var frndUserNm = ""
+    
+    @IBOutlet weak var friendsName: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var arrow: UIImageView!
     @IBOutlet weak var decodedDistLabel: UILabel!
+    
     
     let manager = CLLocationManager()
     var distanceLeft:Int = 0;
     
     // dummy coordinates for testing purposes
-    let dummyLocation: CLLocation = CLLocation(latitude: 37.3307498, longitude: -122.03054302)
+    var dummyLocation: CLLocation = CLLocation(latitude: 37.3307498, longitude: -122.03054302)
+    let nC = NetworkClient()
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        friendsName.text = self.frndName
+        dummyLocation = nC.getFriendsPosition(friend: frndUserNm)
         
         let location = locations[0]
         // print statement for debugging
